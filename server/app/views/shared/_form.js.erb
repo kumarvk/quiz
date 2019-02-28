@@ -1,0 +1,7 @@
+<% model_name = object.class.to_s.underscore %>
+<% form_id = "#{action}-#{model_name}-form" %>
+
+<%= render 'shared/modal', modal_id: form_id, body: escape_javascript(render 'form',
+  model_name.to_sym => object,
+  submit_button_name: _('Save %s') % model_name,
+  remote: true) %>

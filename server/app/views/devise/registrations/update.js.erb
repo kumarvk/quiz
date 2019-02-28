@@ -1,0 +1,7 @@
+$('#edit_user_password .modal-body').html(
+  <% if resource.errors.any? %>
+    "<%= escape_javascript(render 'devise/registrations/edit_password_form', remote: true) %>"
+  <% else %>
+    "<%= _("Your password has been successfully changed") %>"
+  <% end %>
+);

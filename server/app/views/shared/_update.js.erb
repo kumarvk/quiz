@@ -1,0 +1,9 @@
+<% model_name = object.class.to_s.underscore %>
+<% list_item_selector ||= "##{model_name}-list-item-#{object.id}" %>
+
+$('<%= list_item_selector %>').
+  html("<%= escape_javascript(render 'list_item', model_name.to_sym => object) %>");
+
+$("#edit-<%= model_name %>-form").modal('toggle');
+
+<%= render 'shared/reload_flash' %>

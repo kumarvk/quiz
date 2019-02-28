@@ -1,0 +1,37 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  background: $buttons_default_color;
+  color: #fff;
+  height: $button_height;
+  line-height: $button_height;
+  vertical-align: middle;
+  border-radius: 4px;
+  padding: 0px 6px;
+  text-decoration: none;
+  margin-top: 12px;
+  font-size: $placeholder_size;
+
+  &:hover, &:focus {
+    color: #fff;
+  }
+}
+
+.btn-hollow {
+  background: none;
+  color: #575757;
+  border: $input_border_size solid #575757;
+
+  &:hover, &:focus {
+    color: #575757;
+  }
+}
+
+.delete-btn {
+  background: #e36254;
+}
+
+.edit-btn {
+  background: #3498db;
+}
+

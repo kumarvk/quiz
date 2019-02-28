@@ -1,0 +1,4 @@
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "flash #{name}" %>
+  <script type="text/javascript">growl("<%= name.capitalize %>", "<%= msg %>")</script>
+<% end -%>

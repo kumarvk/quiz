@@ -1,0 +1,13 @@
+<% method = local_assigns[:method].nil? ? :get : local_assigns[:method] %>
+
+<li class="menu-item <%= menu_link_class_for_path(path) %>">
+
+  <%= link_to path, method: method do %>
+    <div class="sidebar-icon-container">
+      <%= inline_svg("Entypo+/#{icon}.svg", class: "sidebar-icon #{icon}") unless local_assigns[:icon].nil? %>
+    </div>
+    <div class="sidebar-text-container">
+      <%= name %>
+    </div>
+  <% end %>
+</li>

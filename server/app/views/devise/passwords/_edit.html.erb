@@ -1,0 +1,19 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <% error_messages = resource.errors.messages %>
+
+  <%= f.hidden_field :reset_password_token %>
+
+    <div class="field form-group">
+    <%= f.password_field :password, autofocus: true, autocomplete: "off", class: "input-sm", placeholder: _("New password") %>
+      <%= render 'shared/field_error', field_name: _("New password"), error_messages: error_messages[:password] %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "input-sm", placeholder: _("Confirm new password") %>
+    <%= render 'shared/field_error', field_name: _("Password confirmation"), error_messages: error_messages[:password_confirmation] %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit _("Change my password"), class: "btn btn-block" %>
+  </div>
+<% end %>

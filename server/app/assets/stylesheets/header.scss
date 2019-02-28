@@ -1,0 +1,215 @@
+$text_color_my_account_regular: #fff;
+
+@mixin header_color($color) {
+  background: $color;
+
+  .header-title {
+    color: $white;
+  }
+
+  .my-account {
+    color: $text_color_my_account_regular;
+
+    .icon {
+      width: 15px;
+      height: 15px;
+      fill: $white;
+    }
+  }
+}
+
+.main-header {
+  position: fixed;
+  height: $header_height;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $another_light_gray;
+  // border-bottom: 1px solid #2e62a9;
+  z-index: $header_layer;
+
+  .content {
+    max-width: $header_max_width;
+
+    #logo {
+      @include flex(row);
+
+      background: $menu_background_active;
+      position: absolute;
+      height: $header_height;
+      width: $menu_width;
+      padding-top: 15px;
+      padding-left: 19px;
+
+      .heart-container {
+        width: 18px;
+
+        .logo-icon {
+          fill: red;
+          stroke: white;
+          stroke-width: 18;
+
+          &:hover {
+            background: red;
+          }
+        }
+      }
+    }
+
+    .header-title {
+      position: absolute;
+      left: $menu_width;
+      height: $header_height;
+      line-height: $header_height;
+      padding: 0px $header_content_padding;
+      color: $another_gray;
+      font-size: 30px;
+
+      // Prevent the SVG icon from line-breaking
+      white-space: nowrap;
+    }
+
+    /* ------------------------ MY ACCOUNT ------------------------ */
+    .my-account {
+      display: inline-block;
+      cursor: pointer;
+      float: right;
+      color: $x;
+      font-size: 14px;
+      height: $header_height;
+      line-height: $header_height;
+      padding: 0px $header_content_padding;
+      position: relative;
+      bottom: -5px;
+
+      .icon {
+        width: 15px;
+        height: 15px;
+        fill: $x;
+        margin-left: -2px;
+      }
+
+      #Chevron_down {
+        position: relative;
+        top: 2px;
+      }
+    }
+
+    .my-account-block {
+      background: #fff;
+      box-shadow: 0 1px 2px 0 #d4d4d4;
+      border: 1px solid #d3d3d3;
+      border-radius: 3px;
+      display: none;
+      z-index: $header_layer;
+
+      li {
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      a, .link {
+        font-size: 12px;
+        text-decoration: none;
+        color: #656565;
+        background: none;
+        border: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .my-account-block a:hover {
+        text-decoration: underline;
+    }
+  }
+
+  &.blue {
+    @include header_color($light_blue);
+  }
+
+  &.green {
+    @include header_color($light_green);
+  }
+
+  &.orange {
+    @include header_color($light_orange);
+  }
+
+  &.red {
+    @include header_color($light_red);
+  }
+
+  &.purple {
+    @include header_color($light_purple);
+  }
+
+  &.yellow {
+    @include header_color(#f0c330);
+  }
+}
+
+.header-icon {
+  display: inline;
+  margin: 0 auto;
+  fill: $another_gray;
+  $header_icon_side_length: 30px;
+  width: $header_icon_side_length;
+  height: $header_icon_side_length;
+  margin-left: 2px;
+
+  &.home {
+    margin-bottom: -3px;
+  }
+
+  &.wallet {
+    width: 32px;
+    height: 32px;
+    fill: #3183b9;
+    margin-bottom: -3px;
+    margin-left: -1px;
+  }
+
+  &.users {
+    width: 28px;
+    height: 28px;
+    fill: #299454;
+  }
+
+  &.location-pin {
+    width: 32px;
+    height: 32px;
+    margin-bottom: -3px;
+    margin-left: -8px;
+    fill: #d1860f;
+  }
+
+  &.open-book {
+    fill: #c4413a;
+    margin-bottom: -2px;
+    margin-left: -1px;
+  }
+
+  &.drink {
+    width: 28px;
+    height: 28px;
+    margin-bottom: -2px;
+    fill: #7a3a95;
+    margin-left: -3px;
+  }
+
+  &.plus {
+    width: 42px;
+    height: 42px;
+    margin-bottom: -9px;
+    margin-left: -8px;
+    fill: #cea729;
+  }
+}

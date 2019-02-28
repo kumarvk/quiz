@@ -1,0 +1,21 @@
+<%# Inject the given body-html into the modal body %>
+$('#<%= modal_id %> .modal-body').html("<%= body %>");
+
+<%# Change modal title, if a title is given %>
+<% if defined?(title) %>
+  $('#<%= modal_id %> .modal-title').html("<%= title %>");
+<% end %>
+
+var afterShow = function () {
+  $('#<%= modal_id %> input.form-control:first').focus();
+  Combos.injectToPage('#<%= modal_id %>');
+  Cocoon.processPage('#<%= modal_id %>');
+  Icheck.injectToPage('#<%= modal_id %>');
+};
+
+if ($('#<%= modal_id %>').is(":visible")) {
+  afterShow();
+} else {
+  <%# Open the modal %>
+  $('#<%= modal_id %>').modal().on('shown.bs.modal', afterShow);
+}

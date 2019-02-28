@@ -1,0 +1,8 @@
+{
+  "ignored_warnings": [
+    {
+      "fingerprint": "b623132cbff52fd620e2a63b747159c816cf8ecc1ea0e4e37bd6e00273d19f49",
+      "note": "ignore mass-assignment at Paypal IPN controller"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<%= render 'shared/home' %>
+
+<%= render 'shared/modal', modal_id: 'reset_user_password',
+           body: render('devise/passwords/edit'),
+           modal_title: _("Change your password") %>
+
+<script type="text/javascript">
+  $(function() {
+    $('#reset_user_password').modal();
+  });
+</script>

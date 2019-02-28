@@ -1,0 +1,10 @@
+<% title = user_signed_in? ? _("Home") : _("Welcome") %>
+<% provide(:title, title) %>
+<% icon = user_signed_in? ? "home" : nil %>
+<% provide(:icon, icon) %>
+
+<% if user_signed_in? %>
+  <%= render "static_pages/overview" %>
+<% else %>
+  <%= render 'shared/home' %>
+<% end %>

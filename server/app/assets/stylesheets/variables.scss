@@ -1,0 +1,91 @@
+$aubergine: #303642;
+$gray: #949494;
+$dark_gray: #4F5157;
+$almost_white: #FEFDFF;
+$light_gray: #F5F5F6;
+$font_color_primary: #515764;
+$another_light_gray: #EBEBEB;
+$another_gray: #92959B;
+$white: #FFFFFF;
+$light_blue: #3498DB;
+$light_green: #27AE60;
+$light_orange: #F39C12;
+$light_red: #E74C3C;
+$light_purple: #8e44ad;
+$yellow: #f1c40f;
+$x: #92959b;
+
+$gray_one: #2C82BB;
+$gray_two: #219552;
+$gray_three: #D1860F;
+$gray_four: #C64035;
+$gray_five: #7a3a95;
+$gray_six: #CFA80D;
+
+$menu_width: 0px;
+$menu_background: #2b303a;
+$menu_li_height: 44px;
+$menu_li_padding_left: 20px;
+$menu_li_inactive_color: $gray;
+$menu_li_active_color: $almost_white;
+$menu_separator_line_height: 1px;
+$menu_separator_color: $dark_gray;
+$menu_background_active: $aubergine;
+
+$header_height: 110px;
+$header_content_padding: 35px;
+$header_max_width: 1070px;
+
+$main_content_padding: 33px $header_content_padding;
+
+$placeholder_size: 14px;
+
+
+$header_layer: 10;
+
+$input_height: 44px;
+$input_border_size: 2px;
+$input_border_color: #ccc;
+$input_border_style: $input_border_size solid $input_border_color;
+$input_border_radius: 4px;
+$input_border_active_color: #4D90FE;
+$input_font_size: 14px;
+
+$button_height: $input_height;
+$buttons_default_color: #0070EC;
+
+$pagination-active-bg: $dark_gray;
+$pagination-active-border: $dark_gray;
+$pagination-color: $dark_gray;
+
+.nav {
+  padding-bottom: 400px;
+}
+
+.dark_nav {
+  background-color: darken(#2B3856, 2);
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background-color: darken(#2B3856, 10) !important;
+  color: white;
+}
+
+.nav-pills > li > a {
+  color: white;
+}
+
+.nav-pills > li > a:hover, .nav-pills > li > a:focus {
+  background-color: darken(#2B3856, 10) !important;
+  color: white;
+}
+
+@mixin flex($direction) {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  flex-direction: $direction;
+}

@@ -1,0 +1,76 @@
+$horizontal-padding: 32px;
+
+.modal-header {
+  text-align: center;
+  border: 0;
+  padding: 25px $horizontal-padding;
+  background-color: #F0F0F0;
+
+  h3 {
+    color: #575757;
+    font-size: 24px;
+    margin: 0px 0px 0px 4px;
+    padding: 0px;
+  }
+}
+
+.modal-body {
+  padding: 9px $horizontal-padding;
+  padding-bottom: 25px;
+}
+
+.modal-content {
+  max-width: 620px;
+}
+
+.modal-lg .modal-content {
+  max-width: inherit;
+}
+
+.modal-content {
+  border-radius: 0px;
+  // padding: 25px 32px 25px 32px;
+  padding: 0;
+  margin: 0;
+
+  .form-group {
+    margin: 0;
+    padding: 16px 0 0 0px;
+    // height: 55px;
+  }
+
+  input[type=text], input[type=password], input[type=number], input[type=date], input[type=range],
+   input[type=time], input[type=email], input[type=search] {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  label {
+    font-weight: normal;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    margin-top: 45px;
+  } 
+}
+
+.modal.small {
+  .modal-dialog, .modal-content {
+    max-width: 400px;
+  }
+
+  &.hundred {
+    font-size: 100%;
+  }
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+}

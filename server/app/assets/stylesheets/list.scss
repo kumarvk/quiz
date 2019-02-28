@@ -1,0 +1,47 @@
+$primary-color: #EBEBEB;
+$width-key: 130px;
+$width-key-large: 180px;
+$width-value: 375px;
+
+.list {
+  padding: 20px 0;
+  color: #515764;
+
+  .list-row {
+    @include flex(row);
+
+    border: 2px solid $primary-color;
+
+    width: $width-value + $width-key;
+
+    &:not(:last-child) {
+      border-bottom: 0;
+    }
+
+    .key, .value {
+      @include flex(row);
+      align-items: center;
+      padding: 10px;
+    }
+
+    .key {
+      background-color: $primary-color;
+      width: $width-key;
+      height: 40px;
+      justify-content: flex-end;
+      font-weight: bold;
+    }
+  }
+
+  // Overwrite some values in case it's supposed to
+  // be a large list.
+  &.large {
+    .list-row {
+      width: $width-value + $width-key-large;
+
+      .key {
+        width: $width-key-large;
+      }
+    }
+  }
+}

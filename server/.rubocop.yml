@@ -1,0 +1,86 @@
+require: rubocop-rspec
+
+Rails:
+  Enabled: true
+
+AllCops:
+  TargetRubyVersion: 2.4
+  Exclude:
+    - "bin/**/*"
+    - "db/migrate/**/*.rb"
+    - "db/schema.rb"
+    - "config/routes.rb"
+    - "config/environments/*.rb"
+    - "node_modules/**/*"
+    - "Guardfile"
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/ClassLength:
+  Max: 100
+
+Metrics/MethodLength:
+  Max: 12
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+Style/Alias:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: true
+  Exclude:
+    - "db/migrate/*"
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+
+Layout/EmptyLinesAroundModuleBody:
+  EnforcedStyle: empty_lines
+
+Layout/LeadingCommentSpace:
+  Exclude:
+    - Gemfile
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/BlockComments:
+  Exclude:
+    - "spec/spec_helper.rb"
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Rails/TimeZone:
+  Enabled: false
+
+Rails/Output:
+  Exclude:
+    - db/seeds.rb
+
+Metrics/AbcSize:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/InstanceVariable:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Lint/Void:
+  Enabled: false

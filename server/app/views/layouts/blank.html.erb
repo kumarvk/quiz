@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<%= render 'layouts/html_head' %>
+
+<body>
+
+<div class="container-fluid">
+  <div class="text-content">
+    <div id="flash">
+      <%= render 'layouts/flash' %>
+    </div>
+    <%= yield %>
+  </div>
+</div>
+
+</body>
+</html>

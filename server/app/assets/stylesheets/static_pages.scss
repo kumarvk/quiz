@@ -1,0 +1,154 @@
+$box_side_length: 400px;
+$body_space: 90px;
+$content_width: 540px;
+$footer_height: 85px;
+
+.padding {
+  padding: 10px;
+}
+
+// Home page (when signed out)
+.homepage-container {
+  @include flex(column);
+  align-items: center;
+  // justify-content: center;
+
+  height: 100vh;
+
+  padding-bottom: $footer_height;
+
+  $color: $buttons_default_color;
+  a.button, .button {
+    color: $color;
+    border: 1px solid $color;
+    border-radius: 5px;
+    padding: 5px;
+
+    &:hover {
+      background-color: $color;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .ad-badge {
+    width: 200px;
+    padding-bottom: 30px;
+  }
+
+  .head {
+    @include flex(row);
+    padding: 35px;
+
+    align-items: center;
+    justify-content: center;
+
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+
+    .space {
+      flex: 0.65;
+    }
+
+    .logo-container {
+      @include flex(row);
+      flex: 0.35;
+    }
+  }
+
+  .body-container {
+    @include flex(row);
+    text-align: center;
+    // background-color: purple;
+
+    .body {
+      @include flex(row);
+      // background-color: red;
+      justify-content: center;
+      align-items: center;
+      // width: $box_side_length + $body_space + $content_width;
+
+      .box {
+        width: $box_side_length;
+        height: $box_side_length;
+        // background-color: blue;
+        border: 1px solid black;
+      }
+
+      .space {
+        height: 10px;
+        width: $body_space;
+        // background-color: green;
+      }
+
+      .content {
+        color: black;
+        max-width: $content_width;
+        font-size: 14px;
+        // background-color: yellow;
+
+        p {
+          color: #747474;
+          padding: 5px 0px 0px 0px;
+          margin-bottom: 5px;
+
+          &.cta {
+            padding-top: 40px;
+            color: #303030;
+            font-size: 16px;
+          }
+
+          &.small {
+            font-size: 11px;
+          }
+        }
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 28px;
+          padding-bottom: 15px;
+          color: #303030;
+          font-family: "Open Sans", sans-serif;
+        }
+      }
+    }
+  }
+
+  .footer {
+    @include flex(row);
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: $footer_height;
+    background-color: #303642;
+
+    .space {
+      width: 70px;
+    }
+
+    a {
+      color: #CBCBCB;
+
+      &:hover {
+        color: #CBCBCB;
+      }
+    }
+  }
+}
+
+

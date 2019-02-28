@@ -1,0 +1,6 @@
+<% submit_label ||= _("Save") %>
+
+<div class="actions form-group">
+  <%= f.submit submit_label, class: "btn btn-block" %>
+  <%= link_to _("Cancel"), 'javascript:void(0)', 'data-dismiss' => 'modal', class: "btn btn-block btn-hollow" %>
+</div>

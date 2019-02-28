@@ -1,0 +1,42 @@
+<% sign_up_link = _("Register") %>
+<% sign_in_link = _("Sign in") %>
+<% forgot_password_link = _("Forgot your password?") %>
+
+<div class="homepage-container">
+  <div class="head">
+    <!-- <div class="space"></div> -->
+    <div class="logo">
+      <%= inline_svg("Entypo+/solid-heart.svg", class: "logo-icon filled", title: "swsw") %>
+    </div>
+  </div>
+
+  <div class="body-container">
+    <div class="body">
+      <!-- <div class="box"></div>
+      <div class="space"></div> -->
+      <div class="content">
+        <p class="cta">
+          <%= link_to sign_up_link, new_user_registration_path, remote: true, class: "button" %>
+          <%= _("or") %>
+          <%= link_to sign_in_link, new_user_session_path, remote: true %>
+        </p>
+        <p class="small">
+          <%= link_to forgot_password_link, new_user_password_path, remote: true %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <%= link_to _("Product overview"), product_overview_path %>
+    <div class="space"></div>
+    <%= link_to _("Terms of service"), terms_of_service_path %>
+    <div class="space"></div>
+    <%= link_to _("Privacy policy"), privacy_policy_path %>
+  </div>
+</div>
+
+<%# MODALS %>
+<%= render 'shared/modal', modal_id: "new_user_registration", modal_title: _("Create account"), css_class: 'small hundred' %>
+<%= render 'shared/modal', modal_id: "new_user_session", modal_title: "", css_class: 'small hundred' %>
+<%= render 'shared/modal', modal_id: "large", modal_title: "", css_class: 'hundred', dialog_css_class: 'modal-lg' %>

@@ -1,0 +1,13 @@
+<%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post },
+                       remote: true) do |f| %>
+
+    <%= render 'shared/error_messages', object: resource %>
+
+    <div class="field form-group">
+      <%= f.email_field :email, class: "form-control input-lg", placeholder: _('e-mail'), autofocus: true %>
+    </div>
+
+  <div class="form-group">
+      <%= f.submit _("Send me reset password instructions"), class: "btn btn-block" %>
+  </div>
+<% end %>

@@ -1,0 +1,162 @@
+$tile_width: 225px;
+$tile_margin: 10px;
+$tile_margin_right: 10px;
+
+.tile {
+  width: $tile_width;
+  height: 125px;
+  margin: $tile_margin;
+  margin-right: $tile_margin_right;
+  color: white;
+  padding: 15px 15px 10px 15px;
+  font-size: 12px;
+  font-weight: normal;
+  float: left;
+  position: relative;
+
+  h1 {
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .content {
+    z-index: 1;
+    position: relative;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    line-height: 16px;
+    font-size: .96em;
+    letter-spacing: 0.4px;
+    font-color: #fbfafa;
+  }
+
+  &.blue {
+    background-color: $light_blue;
+
+    &:hover {
+      background-color: #4AA3DF;
+    }
+  }
+
+  &.green {
+    background-color: $light_green;
+
+    &:hover {
+      background-color: #2CC36B;
+    }
+  }
+
+  &.red {
+    background-color: $light_red;
+
+    &:hover {
+      background-color: #EA6153;
+    }
+  }
+
+  &.orange {
+    background-color: $light_orange;
+
+    &:hover {
+      background-color: #F4A62A;
+    }
+  }
+
+  &.purple {
+    background-color: $light_purple;
+
+    &:hover {
+      background-color: #9B50BA;
+    }
+  }
+
+  &.yellow {
+    background-color: $yellow;
+
+    &:hover {
+      background-color: #F2CA27;
+    }
+  }
+}
+
+.tiles-container {
+  // Make sure there are not more than 3 tiles per row
+  max-width: ($tile_width + $tile_margin + $tile_margin_right) * 3;
+}
+
+.tile-icon {
+  $background_icons_side_length: 30px;
+  width: $background_icons_side_length;
+  height: $background_icons_side_length;
+  fill: $gray_one;
+
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+
+  z-index: 0;
+
+  &.wallet {
+    width: 110px;
+    height: 110px;
+    fill: $gray_one;
+    bottom: 5px;
+    right: 5px;
+  }
+
+  &.users {
+    fill: $gray_two;
+    width: 90px;
+    height: 110px;
+    bottom: 5px;
+    right: 15px;
+  }
+
+  &.location-pin {
+    width: 108px;
+    height: 108px;
+    fill: $gray_three;
+    bottom: 5px;
+    right: -12px;
+  }
+
+  &.open-book {
+    width: 95px;
+    height: 95px;
+    fill: $gray_four;
+    bottom: 10px;
+  }
+
+  &.drink {
+    width: 95px;
+    height: 94px;
+    fill: $gray_five;
+    bottom: 10px;
+    right: 5px;
+  }
+
+  &.plus {
+    width: 138px;
+    height: 138px;
+    fill: $gray_six;
+    right: -12px;
+    bottom: -14px;
+  }
+}
+
+// "Expands" a link to the size of the including container. Usually an empty span.
+span.link-spanner {
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  z-index: 2;
+
+  /* fixes overlap error in IE7/8, 
+     make sure you have an empty gif */
+  // background-image: url('empty.gif');
+}

@@ -1,0 +1,16 @@
+<div class="tile <%= color %>">
+  
+  <%= link_to link_to_path do %>
+    <span class="link-spanner"></span>
+  <% end %>
+
+  <%= inline_svg("Entypo+/#{icon}.svg", class: "tile-icon #{icon}") %>
+
+  <div class="content">
+    <h1><%= headline %></h1>
+    
+    <%= message %>
+  </div>
+
+  
+</div>
